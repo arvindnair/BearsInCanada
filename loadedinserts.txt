@@ -1,0 +1,222 @@
+Species:
+INSERT INTO SPECIES VALUES ('B','Black bear','113');
+
+INSERT INTO SPECIES VALUES ('G','Grizzly bear','142');
+
+INSERT INTO SPECIES VALUES ('U','Undetermined',null);
+
+Status:
+INSERT INTO STATUS VALUES ('0','Sample exists');
+
+INSERT INTO STATUS VALUES ('1','Sample used up');
+
+Class:
+INSERT INTO CLASSIFICATION VALUES ('T','Telemetry');
+
+INSERT INTO CLASSIFICATION VALUES ('H','Hair Snag');
+
+INSERT INTO CLASSIFICATION VALUES ('S','Scat');
+
+Participant:
+INSERT INTO PARTICIPANT VALUES ('P2001','Bill Brown','2014-02-14',null);
+
+INSERT INTO PARTICIPANT VALUES ('P2004','Jane Smith','2014-02-14',null);
+
+INSERT INTO PARTICIPANT VALUES ('P2036','Frank Martin','2012-08-15','2014-01-01');
+
+INSERT INTO PARTICIPANT VALUES ('P2045','Anne Dough','2013-06-12',null);
+
+INSERT INTO PARTICIPANT VALUES ('P2046','Mike Green','2012-10-28',null);
+
+INSERT INTO PARTICIPANT VALUES ('D0004','Max','2014-06-01',null);
+
+INSERT INTO PARTICIPANT VALUES ('D0008','Sampson','2014-02-05',null);
+
+INSERT INTO PARTICIPANT VALUES ('D0013','Cindy','2013-12-10','2014-12-20');
+
+INSERT INTO PARTICIPANT VALUES ('D0022','Rover','2014-05-20',null);
+
+INSERT INTO PARTICIPANT VALUES ('P0000','Bob Bureaucrat',null,null);
+
+INSERT INTO PARTICIPANT VALUES ('P0101','Sam Supervisor',null,null);
+
+INSERT INTO PARTICIPANT VALUES ('P0102','Mary Manager',null,null);
+
+INSERT INTO PARTICIPANT VALUES ('P0103','Fred Foreman',null,null);
+
+Dog:
+INSERT INTO DOG VALUES ('D0004','4');
+
+INSERT INTO DOG VALUES ('D0008','2');
+
+INSERT INTO DOG VALUES ('D0013','2');
+
+INSERT INTO DOG VALUES ('D0022','2');
+
+Project Director:
+INSERT INTO ProjectDirector VALUES ('P0000',null);
+
+Region Manager:
+INSERT INTO regionmanager VALUES ('P0101',null);
+
+INSERT INTO regionmanager VALUES ('P0102',null);
+
+INSERT INTO regionmanager VALUES ('P0103',null);
+
+Region:
+INSERT INTO region VALUES ('NR','North Region','9x9','P0101');
+
+INSERT INTO region VALUES ('CR','Central Region','9x9','P0102');
+
+INSERT INTO region VALUES ('SR','South Region','5x5','P0103');
+
+Study:
+INSERT INTO study VALUES ('N14','North 2014','NR');
+
+INSERT INTO study VALUES ('S14','South 2014','SR');
+
+INSERT INTO study VALUES ('C14','Central 2014','CR');
+
+INSERT INTO study VALUES ('C15','Central 2015','CR');
+
+Animal:
+INSERT INTO animal VALUES ('42','N14','M','B');
+
+INSERT INTO animal VALUES ('89','S14','F','B');
+
+INSERT INTO animal VALUES ('59','C14','M','B');
+
+INSERT INTO animal VALUES ('113','C14','F','G');
+
+INSERT INTO animal VALUES ('59','C15','F','B');
+
+INSERT INTO animal VALUES ('50','C15','?','B');
+
+INSERT INTO animal VALUES ('118','N14','F','B');
+
+INSERT INTO animal VALUES ('112','C15','M','G');
+
+INSERT INTO animal VALUES ('66','C14','F','G');
+
+INSERT INTO animal VALUES ('66','N14','?','U');
+
+INSERT INTO animal VALUES ('66','S14','M','B');
+
+INSERT INTO animal VALUES ('113','N14','F','G');
+
+INSERT INTO animal VALUES ('63','S14','M','B');
+
+INSERT INTO animal VALUES ('114','C14','F','G');
+
+Sample:
+INSERT INTO SAMPLE VALUES ('17','N14','05:8:3','2014/07','42','1','S');
+
+INSERT INTO SAMPLE VALUES ('22','S14','93:2:4','2014/11','89','1','H');
+
+INSERT INTO SAMPLE VALUES ('44','C14','32:1:9','2014/09','59','0','T');
+
+INSERT INTO SAMPLE VALUES ('45','C14','40:1:1','2015/10','113','0','H');
+
+INSERT INTO SAMPLE VALUES ('47','C14','41:2:3','2014/09','59','0','T');
+
+INSERT INTO SAMPLE VALUES ('48','C15','34:4:4','2015/09','59','1','S');
+
+INSERT INTO SAMPLE VALUES ('56','C15','40:1:1','2015/07','50','1','S');
+
+INSERT INTO SAMPLE VALUES ('59','N14','07:1:2','2014/06','118','1','S');
+
+INSERT INTO SAMPLE VALUES ('79','C15','32:5:5','2014/07','112','1','S');
+
+INSERT INTO SAMPLE VALUES ('82','C14','31:5:8','2014/11','66','0','T');
+
+INSERT INTO SAMPLE VALUES ('100','N14','01:1:9','2014/07','66','0','S');
+
+INSERT INTO SAMPLE VALUES ('68','S14','80:3:2','2014/07','66','0','H');
+
+INSERT INTO SAMPLE VALUES ('27','N14','15:2:6','2014/08','42','1','S');
+
+INSERT INTO SAMPLE VALUES ('11','N14','19:4:7','2014/07','113','0','S');
+
+INSERT INTO SAMPLE VALUES ('45','S14','90:3:4','2014/07','63','0','S');
+
+INSERT INTO SAMPLE VALUES ('17','C14','38:4:1','2014/10','114','1','T');
+
+INSERT INTO SAMPLE VALUES ('18','C14','38:4:1','2014/10','114','1','S');
+
+
+Scat:
+INSERT INTO SCAT VALUES ('17','N14','109','D0004');
+
+INSERT INTO SCAT VALUES ('48','C15','100','D0013');
+
+INSERT INTO SCAT VALUES ('56','C15','103.5','D0004');
+
+INSERT INTO SCAT VALUES ('59','N14','120','D0022');
+
+INSERT INTO SCAT VALUES ('79','C15','135','D0004');
+
+INSERT INTO SCAT VALUES ('100','N14',NULL,'D0022');
+
+INSERT INTO SCAT VALUES ('27','N14','115','D0008');
+
+INSERT INTO SCAT VALUES ('11','N14','135','D0008');
+
+INSERT INTO SCAT VALUES ('45','S14','117','D0013');
+
+INSERT INTO SCAT VALUES ('18','C14','150','D0004');
+
+LabTechnician:
+INSERT INTO labtechnicians VALUES ('P2001');
+
+INSERT INTO labtechnicians VALUES ('P2004');
+
+INSERT INTO labtechnicians VALUES ('P2036');
+
+INSERT INTO labtechnicians VALUES ('P2045');
+
+INSERT INTO labtechnicians VALUES ('P2046');
+
+HairTelemetry:
+INSERT INTO hairtelemetry VALUES('22','S14','P2045');
+
+INSERT INTO hairtelemetry VALUES('44','C14','P2001');
+
+INSERT INTO hairtelemetry VALUES('45','C14','P2046');
+
+INSERT INTO hairtelemetry VALUES('47','C14','P2045');
+
+INSERT INTO hairtelemetry VALUES('82','C14','P2045');
+
+INSERT INTO hairtelemetry VALUES('68','S14','P2004');
+
+INSERT INTO hairtelemetry VALUES('17','C14','P2004');
+
+Q4:
+select s.AnimalNumber, s.StudyID, abs(sc.PHT_Value-sp.AveragePHT) as abs_value
+from sample s, scat sc, species sp
+where sc.samplenumber = s.samplenumber
+and sc.studyid = s.studyid
+and abs(sc.PHT_Value-sp.AveragePHT) <= 5
+order by AnimalNumber;
+
+select DISTINCT s.AnimalNumber, s.StudyID, abs(sc.PHT_Value-sp.AveragePHT) as abs_value
+from sample s, scat sc, species sp, animal a
+where sc.samplenumber = s.samplenumber
+and sc.studyid = s.studyid
+and sp.speciescode = a.speciescode
+and s.animalnumber = a.animalnumber
+and abs(sc.PHT_Value-sp.AveragePHT) <= 5
+order by AnimalNumber;
+
+select s.AnimalNumber, s.StudyID, abs(sc.PHT_Value-sp.AveragePHT) as abs_value
+from sample s, scat sc, species sp, animal a
+where sc.samplenumber = s.samplenumber
+and sc.studyid = s.studyid
+and sp.speciescode = a.speciescode
+and s.animalnumber = a.animalnumber
+and s.studyid = a.studyid
+and abs(sc.PHT_Value-sp.AveragePHT) <= 5
+order by AnimalNumber;
+
+
+
